@@ -20,7 +20,7 @@ The components documented below are exposed as CommonJS modules and can be acces
 import { Menu, MenuItem } from 'react-frankie-components';
 
 // CommonJS
-var Menu = require('rreact-frankie-components').Menu;
+var Menu = require('react-frankie-components').Menu;
 // or
 var Frankie = require('react-frankie-components');
 var Menu = Frankie.Menu;
