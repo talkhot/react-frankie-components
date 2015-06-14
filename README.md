@@ -1,4 +1,4 @@
-react-pure
+react-frankie-components
 ==========
 
 [React](http://facebook.github.io/react/) components using [Pure CSS](http://purecss.io/).
