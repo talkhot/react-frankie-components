@@ -1,12 +1,12 @@
 react-pure
 ==========
 
-[React](http://facebook.github.io/react/) components using [Pure CSS](http://purecss.io/).  
+[React](http://facebook.github.io/react/) components using [Pure CSS](http://purecss.io/).
 
 ## Install
 
 ```bash
-npm install react-pure
+npm install react-frankie-components
 ```
 
 React is also required as a peer dependency.
@@ -17,14 +17,14 @@ The components documented below are exposed as CommonJS modules and can be acces
 
 ```js
 // ES6
-import { Button, Cell } from 'react-pure';
+import { Menu, MenuItem } from 'react-frankie-components';
 
 // CommonJS
-var Button = require('react-pure').Button;
+var Menu = require('rreact-frankie-components').Menu;
 // or
-var Pure = require('react-pure');
-var Button = Pure.Button;
+var Frankie = require('react-frankie-components');
+var Menu = Frankie.Menu;
 
 // Direct access to the module
-var Button = require('react-pure/lib/Button');
+var Menu = require('react-frankie-components/lib/Menu');
 ```
