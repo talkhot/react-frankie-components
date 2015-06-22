@@ -13,15 +13,15 @@ export default class NavMask extends React.Component {
   }
 
   componentDidUpdate() {
-    (this.props.expanded && this.props.lockBodyScroll) ? this.disableBodyScroll() : this.enableBodyScroll();
+    (this.props.expanded && this.props.lockBodyScroll) ? this._disableBodyScroll() : this._enableBodyScroll();
   }
 
   // TODO: we could make a component out of this
-  enableBodyScroll() {
+  _enableBodyScroll() {
     document.body.style.overflow = '';
   }
 
-  disableBodyScroll() {
+  _disableBodyScroll() {
     document.body.style.overflow = 'hidden';
   }
 
