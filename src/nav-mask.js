@@ -3,20 +3,25 @@ import classNames from 'classnames';
 
 export default class NavMask extends React.Component {
   static propTypes: {
-    expanded: React.PropTypes.bool.isRequired
+    expanded: React.PropTypes.bool.isRequired,
+    lockBodyScroll: React.PropTypes.bool
   }
 
-  componentWillUpdate() {
-    // do we hide the body scrollbars on expand?
-    (this.props.expanded & this.props.lockBodyScroll) ? this._enableBodyScroll() : this._disableBodyScroll();
+  static defaultProps = {
+    expanded: false,
+    lockBodyScroll: true
+  }
+
+  componentDidUpdate() {
+    (this.props.expanded && this.props.lockBodyScroll) ? this.disableBodyScroll() : this.enableBodyScroll();
   }
 
   // TODO: we could make a component out of this
-  _enableBodyScroll() {
+  enableBodyScroll() {
     document.body.style.overflow = '';
   }
 
-  _disableBodyScroll() {
+  disableBodyScroll() {
     document.body.style.overflow = 'hidden';
   }
 
